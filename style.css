@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to right, #d41ad4, #3155d3);
+    border-radius: 0 0 50px 50px;
+    width: 100%;
+    animation: fadeIn 1s ease-in;
+    color:white;
+  }
+  
+  h1 {
+    font-family:Londrina Sketch;
+    font-size: 2.5em;
+    margin: 0;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .buttons {
+    margin: 20px 0;
+  }
+  
+  .button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .profile-image {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #006699;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite alternate;
+  }
+  
+  .about {
+    background-color: rgba(0, 102, 153, 0.1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: left;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+  
+  .socials {
+    margin-top: 10px;
+    align-self: center ;
+  }
+  
+  .fa {
+    color: #003366;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .fa:hover {
+    color: #006699;
+  }
+  
+  .contact-button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .contact-button[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0.8;
+  }
+  
+  .contact-button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+  }
+  
+  footer {
+    background-color: #050606;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    .profile-image {
+      max-width: 100px;
+    }
+  
+    .about {
+      padding: 15px;
+    }
+  }
+  
